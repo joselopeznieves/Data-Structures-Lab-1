@@ -14,5 +14,12 @@ public class Geometric extends Progression {
 		current = current * commonFactor; 
 		return current;
 	}
+	
+	@Override
+	public String toString() {
+		int f = (int) this.firstValue();
+		int cF = (int) this.commonFactor;
+		return "Geom(" +  f + "," + cF +")";
+	}
 
 }

@@ -13,5 +13,12 @@ public class Arithmetic extends Progression {
 		current = current + commonDifference; 
 		return current;
 	}
+	
+	@Override
+	public String toString() {
+		int f = (int) this.firstValue();
+		int cD = (int) this.commonDifference;
+		return "Arith(" + f + "," + cD +")";
+	}
 
 }
