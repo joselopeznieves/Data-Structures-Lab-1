@@ -16,6 +16,10 @@ public class Fibonacci extends Progression {
 	public double nextValue() {
         // add the necessary code here
 		
+		if(!wasFirstValCalled) {
+			throw new IllegalStateException("firstValue method must be called at least once before this one.");
+		}
+		
 		current += prev;
 		
 		return current;

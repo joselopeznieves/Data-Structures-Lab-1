@@ -11,6 +11,10 @@ public class Geometric extends Progression {
 	
 	@Override
 	public double nextValue() {
+		
+		if(!wasFirstValCalled) {
+			throw new IllegalStateException("firstValue method must be called at least once before this one.");
+		}
 		current = current * commonFactor; 
 		return current;
 	}
