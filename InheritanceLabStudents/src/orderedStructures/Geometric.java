@@ -33,5 +33,15 @@ public class Geometric extends Progression {
 		
 		return this.firstValue() * Math.pow(this.commonFactor, n-1);
 	}
+	
+	public boolean equals(Object other) {
+		if(other == null || !this.getClass().isAssignableFrom(other.getClass())) return false;
+		
+		Geometric castedObj = (Geometric) other;
+		
+		if(castedObj.firstValue() == this.firstValue() && castedObj.commonFactor == this.commonFactor) return true;
+		
+		return false;
+	}
 
 }
